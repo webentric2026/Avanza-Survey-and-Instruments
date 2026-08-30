@@ -117,183 +117,27 @@ export default function Instrument() {
     setToast(`Prefilled — ${item.name}`);
   }
 
-  function validate() {
-    const e = {};
-    if (!form.name.trim()) e.name = "Required";
-    if (!form.phone.trim()) e.phone = "Required";
-    else if (form.phone.replace(/\D/g, "").length < 10) e.phone = "Enter a valid phone";
-    if (!form.email.trim()) e.email = "Required";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) e.email = "Invalid email";
-    if (!form.instrument) e.instrument = "Select an instrument";
-    if (!form.location.trim()) e.location = "Required";
-    if (!form.qty || Number(form.qty) < 1) e.qty = "Min 1";
-    setErrors(e);
-    return Object.keys(e).length === 0;
-  }
-
-  function onSubmit(e) {
-    e.preventDefault();
-    if (!validate()) return;
-    setSuccess(true);
-    setTimeout(() => setSuccess(false), 5000);
-    setForm({
-      name: "",
-      company: "",
-      phone: "",
-      email: "",
-      instrument: "",
-      start: "",
-      duration: "1 week",
-      location: "",
-      qty: "1",
-      message: "",
-    });
-    setErrors({});
-  }
-
   return (
     <div className="min-h-screen bg-[#F8F9FB] text-slate-900 antialiased selection:bg-[#D4A017] selection:text-white">
-      <style>{`@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Sans:wght@500;600;700&display=swap');`}</style>
-
-      {/* top utility bar */}
-      <div className="hidden border-b border-slate-200 bg-white lg:block">
-        <div className="mx-auto flex max-w-[1280px] items-center justify-between px-6 py-2 text-[11px] font-medium tracking-wide text-slate-500">
-          <span className="flex items-center gap-2">
-            <span className="h-1.5 w-1.5 bg-emerald-500" /> FIELD-READY FLEET • INSPECTED & CALIBRATED
-          </span>
-          <span className="flex items-center gap-4">
-            <span className="inline-flex items-center gap-1.5">
-              <Phone className="h-3.5 w-3.5" /> +91 90000 00000
-            </span>
-            <span className="inline-flex items-center gap-1.5">
-              <Mail className="h-3.5 w-3.5" /> rentals@avaza.example
-            </span>
-          </span>
-        </div>
-      </div>
-
-      {/* HERO */}
-      <section className="border-b border-slate-200 bg-white mt-20 md:mt-10">
-        <div className="mx-auto max-w-[1280px] px-4 py-8 sm:px-6 lg:px-8 lg:py-10">
-          <div className="grid items-center gap-8 lg:grid-cols-12">
-            <motion.div
-              initial={{ opacity: 0, y: 14 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-              className="lg:col-span-6"
-            >
-              <div className="inline-flex items-center gap-2 border border-slate-200 bg-white px-3 py-1.5">
-                <span className="h-1.5 w-1.5 bg-[#D4A017]" />
-                <span className="text-[11px] font-semibold tracking-[0.16em] text-slate-600">SURVEYING EQUIPMENT RENTALS</span>
-              </div>
-
-              <h1
-                className="mt-5 font-bold leading-[0.95] tracking-[-0.03em] text-[#0B1220]"
-                style={{ fontFamily: "Instrument Sans, Inter, sans-serif", fontSize: "clamp(32px, 4.2vw, 48px)" }}
-              >
-                Precision <br /> Instruments. <br />
-                <span className="text-[#D4A017]">Ready for the Field.</span>
-              </h1>
-
-              <p className="mt-4 max-w-[560px] text-[14px] leading-6 text-slate-600 sm:text-[15px]">
-                Access professional surveying and geospatial equipment without the cost of ownership. Avaza provides reliable,
-                field-ready instruments with flexible rental options for construction, infrastructure, mapping, and land development
-                projects.
-              </p>
-
-              <div className="mt-6 flex flex-wrap gap-3">
-                <a
-                  href="#catalog"
-                  className="inline-flex h-11 items-center gap-2 bg-[#D4A017] px-6 text-[13px] font-semibold text-white transition hover:bg-[#B8860B]"
-                >
-                  Browse Instruments <ArrowRight className="h-4 w-4" />
-                </a>
-                <a
-                  href="#enquiry"
-                  className="inline-flex h-11 items-center justify-center border border-slate-300 bg-white px-6 text-[13px] font-semibold text-[#0B1220] hover:bg-slate-50"
-                >
-                  Request Rental Quote
-                </a>
-              </div>
-
-              <div className="mt-7 flex flex-wrap gap-4 border-t border-slate-200 pt-6">
-                <span className="inline-flex items-center gap-2 text-[12px] font-medium text-slate-600">
-                  <span className="grid h-7 w-7 place-items-center border border-slate-200 bg-white">
-                    <ShieldCheck className="h-3.5 w-3.5 text-[#0B1220]" />
-                  </span>
-                  Calibrated & field-tested
-                </span>
-                <span className="inline-flex items-center gap-2 text-[12px] font-medium text-slate-600">
-                  <span className="grid h-7 w-7 place-items-center border border-slate-200 bg-white">
-                    <Clock3 className="h-3.5 w-3.5" />
-                  </span>
-                  Short & long-term rental
-                </span>
-                <span className="inline-flex items-center gap-2 text-[12px] font-medium text-slate-600">
-                  <span className="grid h-7 w-7 place-items-center border border-slate-200 bg-white">
-                    <Headset className="h-3.5 w-3.5" />
-                  </span>
-                  Technical support included
-                </span>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
-              className="lg:col-span-6"
-            >
-              <div className="relative overflow-hidden border border-slate-200 bg-slate-100">
-                <img
-                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1600&auto=format&fit=crop"
-                  alt="Surveyor operating total station on active infrastructure site"
-                  className="h-[320px] w-full object-cover sm:h-[420px] lg:h-[480px]"
-                  loading="eager"
-                />
-                <div className="absolute left-4 top-4 inline-flex items-center gap-2 bg-[#0B1220] px-3 py-2 text-white">
-                  <span className="h-2 w-2 animate-pulse bg-emerald-400" />
-                  <span className="text-[11px] font-semibold tracking-[0.14em]">FIELD-READY FLEET • INSPECTED DAILY</span>
-                </div>
-                <div className="absolute inset-x-0 bottom-0 grid grid-cols-3 divide-x divide-slate-200 border-t border-slate-200 bg-white/95 backdrop-blur">
-                  <div className="px-4 py-3 text-center">
-                    <div className="text-[20px] font-bold tracking-tight text-[#0B1220]">120+</div>
-                    <div className="text-[11px] font-semibold tracking-[0.12em] text-slate-500">INSTRUMENTS</div>
-                  </div>
-                  <div className="px-4 py-3 text-center">
-                    <div className="text-[20px] font-bold tracking-tight text-[#0B1220]">8</div>
-                    <div className="text-[11px] font-semibold tracking-[0.12em] text-slate-500">CATEGORIES</div>
-                  </div>
-                  <div className="px-4 py-3 text-center">
-                    <div className="text-[20px] font-bold tracking-tight text-[#0B1220]">24h</div>
-                    <div className="text-[11px] font-semibold tracking-[0.12em] text-slate-500">QUOTE RESPONSE</div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
       {/* CATEGORIES */}
-      <section className="mx-auto max-w-[1280px] px-4 py-10 sm:px-6 lg:px-8 lg:py-12">
+      <section className="mx-auto max-w-[1280px] px-4 py-10 sm:px-6 lg:px-8 lg:py-12 mt-20">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <SectionLabel>EQUIPMENT CATEGORIES</SectionLabel>
             <h2
-              className="mt-2 font-bold leading-none tracking-tight text-[#0B1220]"
-              style={{ fontFamily: "Instrument Sans, Inter, sans-serif", fontSize: "clamp(22px, 2.6vw, 30px)" }}
+              className="mt-2 font-bold leading-none tracking-tight text-[#0B1220] text-3xl sm:text-3xl lg:text-4xl"
             >
               Surveying Instruments <br /> for Every Project
             </h2>
           </div>
-          <p className="max-w-[520px] text-[14px] leading-6 text-slate-600">
+          <p className="max-w-[520px] text-sm leading-6 text-slate-600">
             From precise positioning and measurement to topographic mapping and construction layout, choose equipment suited to the
             demands of your project.
           </p>
         </div>
 
-        <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
+        <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-5">
           {CATEGORIES.map((cat) => (
             <button
               key={cat.id}
@@ -301,7 +145,7 @@ export default function Instrument() {
               className={`group overflow-hidden border bg-white text-left transition hover:border-[#0B1220] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A017] ${category === cat.id ? "border-[#0B1220] ring-1 ring-[#0B1220]" : "border-slate-200"
                 }`}
             >
-              <div className="h-[132px] overflow-hidden bg-slate-100 sm:h-[144px]">
+              <div className="h-[132px] overflow-hidden bg-slate-100 sm:h-[200px]">
                 <img
                   src={cat.image}
                   alt={`${cat.name} — ${cat.desc}`}
@@ -310,11 +154,9 @@ export default function Instrument() {
                 />
               </div>
               <div className="p-4">
-                <div className="text-[12px] font-semibold leading-tight text-[#0B1220]">{cat.name}</div>
-                <div className="mt-1 line-clamp-2 text-[12px] leading-5 text-slate-500">{cat.desc}</div>
-                <span className="mt-3 inline-flex items-center gap-1 text-[11px] font-semibold tracking-wide text-[#0B1220] group-hover:text-[#D4A017]">
-                  Explore <ArrowUpRight className="h-3.5 w-3.5" />
-                </span>
+                <div className="text-md sm:text-lg font-semibold leading-tight text-[#0B1220]">{cat.name}</div>
+                <div className="mt-1 line-clamp-2 text-sm leading-5 text-slate-500">{cat.desc}</div>
+
               </div>
             </button>
           ))}
@@ -326,7 +168,7 @@ export default function Instrument() {
         <div className="mx-auto max-w-[1280px] px-4 py-8 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <h2 className="font-bold tracking-tight text-[#0B1220]" style={{ fontFamily: "Instrument Sans, Inter, sans-serif", fontSize: "28px" }}>
+              <h2 className="font-bold tracking-tight text-[#0B1220]" >
                 Available Instruments
               </h2>
               <p className="mt-1 text-[14px] text-slate-600">
@@ -460,42 +302,19 @@ export default function Instrument() {
                   transition={{ duration: 0.28 }}
                   className="flex flex-col overflow-hidden border border-slate-200 bg-white"
                 >
-                  <div className="relative h-[210px] overflow-hidden bg-slate-100">
+                  <div className="relative h-[310px] overflow-hidden bg-slate-100">
                     <img src={it.image} alt={`${it.brand} ${it.name} — ${it.categoryLabel}`} className="h-full w-full object-cover" loading="lazy" />
-                    <span className="absolute left-3 top-3 border border-slate-200 bg-white px-2 py-1 text-[11px] font-bold tracking-[0.07em] text-[#0B1220]">
-                      {it.categoryLabel.toUpperCase()}
-                    </span>
-                    <span className="absolute bottom-0 left-0 right-0 flex items-center justify-between bg-[#0B1220]/90 px-3 py-1.5 text-[11px] font-semibold tracking-wide text-white backdrop-blur">
+                    <span className="absolute bottom-0 left-0 right-0 flex items-center justify-between bg-white/90 px-3 py-1.5 text-lg font-semibold tracking-wide text-black backdrop-blur">
                       <span>
                         {it.brand} • {it.model}
                       </span>
-                      <span className="h-1.5 w-1.5 bg-emerald-400" />
+
                     </span>
                   </div>
 
                   <div className="flex flex-1 flex-col p-4">
-                    <h3 className="font-semibold leading-tight text-[#0B1220]" style={{ fontFamily: "Instrument Sans, Inter, sans-serif", fontSize: "16px" }}>
-                      {it.name}
-                    </h3>
-                    <p className="mt-1 line-clamp-2 text-[12px] leading-5 text-slate-600">{it.desc}</p>
 
-                    <ul className="mt-3 space-y-1.5">
-                      {it.specs.map((s) => (
-                        <li key={s} className="flex items-start gap-1.5 text-[11px] leading-4 text-slate-600">
-                          <span className="mt-[6px] h-1 w-1 shrink-0 bg-[#FF5A1F]" />
-                          <span>{s}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <div className="mt-3 flex flex-wrap gap-1.5">
-                      <Badge tone={it.availability === "Available" ? "available" : it.availability === "Limited" ? "limited" : "request"}>
-                        {it.availability === "Available" ? "Available for Rental" : it.availability === "Limited" ? "Limited Availability" : "On Request"}
-                      </Badge>
-                      <span className="border border-slate-200 bg-[#F8F9FB] px-2 py-1 text-[11px] text-slate-600">Rental pricing on request</span>
-                    </div>
-
-                    <div className="mt-4 grid grid-cols-2 gap-2">
+                    <div className="mt-4 grid grid-cols-1 gap-2">
                       <button
                         onClick={() => openDetail(it)}
                         className="h-9 border border-slate-300 bg-white text-[13px] font-semibold text-[#0B1220] hover:bg-slate-50"

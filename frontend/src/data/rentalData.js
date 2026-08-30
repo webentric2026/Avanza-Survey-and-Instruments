@@ -1,31 +1,46 @@
+import accessories from "../assets/images/equipments/accessories.jfif"
+import auto_level from "../assets/images/equipments/auto-level.jfif"
+import dgps from "../assets/images/equipments/dgps.jfif"
+import drones from "../assets/images/equipments/drones.jfif"
+import rentals from "../assets/images/equipments/rentals.jfif"
+import total from "../assets/images/equipments/total-station.jfif"
+
+import ts16 from "../assets/images/machines/leica16.jpg"
+import ts13 from "../assets/images/machines/leica13.jpg"
+import trimble from "../assets/images/machines/trimble.jfif"
+import topcon from "../assets/images/machines/topcon.jfif"
+import trimbles7 from "../assets/images/machines/trimbless7.jfif"
+import gs18 from "../assets/images/machines/gs18.jpg"
+
+
 export const CATEGORIES = [
     {
         id: "total-station",
         name: "Total Stations",
         desc: "Robotic & reflectorless for layout and topo",
         image:
-            "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=800&auto=format&fit=crop",
+            total,
     },
     {
         id: "gnss",
         name: "DGPS / GNSS",
         desc: "RTK, dual-frequency and network rover",
         image:
-            "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop",
+            dgps,
     },
     {
         id: "drone",
         name: "Surveying Drones",
         desc: "Photogrammetry & mapping platforms",
         image:
-            "https://images.unsplash.com/photo-1473968512647-3e447244af8f?q=80&w=800&auto=format&fit=crop",
+            drones,
     },
     {
         id: "auto-level",
         name: "Auto Levels",
         desc: "Reliable optical leveling on site",
         image:
-            "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800&auto=format&fit=crop",
+            auto_level,
     },
     {
         id: "digital-level",
@@ -53,7 +68,7 @@ export const CATEGORIES = [
         name: "Survey Accessories",
         desc: "Tripods, prisms, poles & controllers",
         image:
-            "https://images.unsplash.com/photo-1541888946425-d81bb19240f6?q=80&w=800&auto=format&fit=crop",
+            accessories,
     },
 ];
 
@@ -67,7 +82,7 @@ export const INSTRUMENTS = [
         categoryLabel: "Total Station",
         desc: "Robotic total station for high-precision construction and topographic work.",
         image:
-            "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=900&auto=format&fit=crop",
+            ts16,
         availability: "Available",
         specs: ["1″ angular accuracy", "R1000 reflectorless EDM", "3,500 m prism range", "Auto-height & ATR"],
         apps: ["Topographic Survey", "Construction Layout", "Infrastructure Projects"],
@@ -81,7 +96,7 @@ export const INSTRUMENTS = [
         categoryLabel: "Total Station",
         desc: "Mid-range robotic station balancing performance and site productivity.",
         image:
-            "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=900&auto=format&fit=crop",
+            ts13,
         availability: "Available",
         specs: ["2″ / 3″ accuracy", "1,000 m reflectorless", "Prism & non-prism", "Field control ready"],
         apps: ["Land Development", "Road & Highway Survey", "Earthwork Measurement"],
@@ -95,7 +110,7 @@ export const INSTRUMENTS = [
         categoryLabel: "Total Station",
         desc: "DR robotic station with VISION imaging for complex infrastructure.",
         image:
-            "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=900&auto=format&fit=crop",
+            trimbles7,
         availability: "Limited",
         specs: ["1″ / 2″ accuracy", "DR 800 m", "Trimble VISION", "Autolock tracking"],
         apps: ["Infrastructure Projects", "Topographic Survey", "Construction Layout"],
@@ -109,27 +124,13 @@ export const INSTRUMENTS = [
         categoryLabel: "Total Station",
         desc: "UltraSonic robotic station with LongLink for long-range control.",
         image:
-            "https://images.unsplash.com/photo-1541888946425-d81bb19240f6?q=80&w=900&auto=format&fit=crop",
+            topcon,
         availability: "Available",
         specs: ["1″ accuracy", "UltraSonic motors", "LongLink comms", "MAGNET field software"],
         apps: ["Construction Layout", "Mapping", "Land Development"],
     },
     {
         id: 5,
-        name: "Trimble R12i",
-        brand: "Trimble",
-        model: "R12i",
-        category: "gnss",
-        categoryLabel: "DGPS / GNSS",
-        desc: "672-channel RTK rover with IMU tilt compensation for control surveys.",
-        image:
-            "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=900&auto=format&fit=crop",
-        availability: "Available",
-        specs: ["RTK 8 mm + 1 ppm", "IMU tilt compensation", "672 channels", "CenterPoint RTX ready"],
-        apps: ["Control Survey", "Road & Highway Survey", "Mapping"],
-    },
-    {
-        id: 6,
         name: "Leica GS18",
         brand: "Leica",
         model: "GS18 T",
@@ -137,13 +138,13 @@ export const INSTRUMENTS = [
         categoryLabel: "DGPS / GNSS",
         desc: "GNSS RTK rover with visual positioning and tilt capability.",
         image:
-            "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=900&auto=format&fit=crop",
+            gs18,
         availability: "On Request",
         specs: ["RTK + tilt", "Visual positioning", "SmartLink fill", "Captivate workflow"],
         apps: ["Mapping", "Infrastructure Projects", "Land Development"],
     },
     {
-        id: 7,
+        id: 6,
         name: "Sokkia B40",
         brand: "Sokkia",
         model: "B40",
@@ -155,89 +156,5 @@ export const INSTRUMENTS = [
         availability: "Available",
         specs: ["32× magnification", "±15′ compensator", "1.0 mm/km accuracy", "Water-resistant housing"],
         apps: ["Construction Layout", "Earthwork Measurement", "Land Development"],
-    },
-    {
-        id: 8,
-        name: "Leica NA332",
-        brand: "Leica",
-        model: "NA332",
-        category: "auto-level",
-        categoryLabel: "Auto Level",
-        desc: "Compact auto level prepared for daily site deployment.",
-        image:
-            "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=900&auto=format&fit=crop",
-        availability: "Available",
-        specs: ["32× magnification", "360° horizontal circle", "Double-sided damping", "Tripod-ready"],
-        apps: ["Leveling", "Construction Layout", "Infrastructure Projects"],
-    },
-    {
-        id: 9,
-        name: "Leica LS15 Digital Level",
-        brand: "Leica",
-        model: "LS15",
-        category: "digital-level",
-        categoryLabel: "Digital Level",
-        desc: "0.3 mm/km digital level for precise height determination.",
-        image:
-            "https://images.unsplash.com/photo-1497366811353-2533774fa78d?q=80&w=900&auto=format&fit=crop",
-        availability: "Available",
-        specs: ["0.3 mm/km (invar)", "Bar-code staff", "Internal memory", "Digital readout"],
-        apps: ["Precise Leveling", "Infrastructure Projects", "Road & Highway Survey"],
-    },
-    {
-        id: 10,
-        name: "DT-205 Theodolite",
-        brand: "Sokkia",
-        model: "DT-205",
-        category: "theodolite",
-        categoryLabel: "Theodolite",
-        desc: "Digital theodolite for angular measurement and alignment checks.",
-        image:
-            "https://images.unsplash.com/photo-1513828583688-c52646db42da?q=80&w=900&auto=format&fit=crop",
-        availability: "Available",
-        specs: ["5″ accuracy", "Laser plummet option", "Dual display", "Long battery life"],
-        apps: ["Construction Layout", "Alignment", "Topographic Survey"],
-    },
-    {
-        id: 11,
-        name: "Bosch GRL300 HV",
-        brand: "Bosch",
-        model: "GRL300 HV",
-        category: "laser-level",
-        categoryLabel: "Laser Level",
-        desc: "Self-leveling rotating laser for horizontal and vertical control.",
-        image:
-            "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=900&auto=format&fit=crop",
-        availability: "Limited",
-        specs: ["Self-leveling", "300 m range (receiver)", "Remote control", "Grade capability"],
-        apps: ["Grading", "Construction Layout", "Infrastructure Projects"],
-    },
-    {
-        id: 12,
-        name: "DJI Matrice 350 RTK",
-        brand: "DJI",
-        model: "M350 RTK",
-        category: "drone",
-        categoryLabel: "Surveying Drone",
-        desc: "RTK survey drone platform for mapping and photogrammetry.",
-        image:
-            "https://images.unsplash.com/photo-1473968512647-3e447244af8f?q=80&w=900&auto=format&fit=crop",
-        availability: "Available",
-        specs: ["RTK positioning", "45 min endurance", "P1 / L1 payload", "IP45 rating"],
-        apps: ["Mapping", "Topographic Survey", "Infrastructure Projects"],
-    },
-    {
-        id: 13,
-        name: "Survey Accessory Kit",
-        brand: "Avaza",
-        model: "AT-KIT-PRO",
-        category: "accessories",
-        categoryLabel: "Accessories",
-        desc: "Carbon tripod, prism set and pole — ready to pair with any station or rover.",
-        image:
-            "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=900&auto=format&fit=crop",
-        availability: "Available",
-        specs: ["Carbon tripod", "Single-prism kit", "2.6 m pole", "Hard case included"],
-        apps: ["All Surveys", "Construction", "Mapping"],
     },
 ];
