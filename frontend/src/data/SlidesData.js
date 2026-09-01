@@ -4,11 +4,11 @@
 // ~1920x1080, compressed). Use next-gen formats + responsive srcset if your
 // build tooling supports it (e.g. vite-imagetools).
 
-import main from "../assets/images/hero/hero_main.png"
+import main from "../assets/images/hero/hero_main.jpg"
 import topography from "../assets/images/hero/hero_topography.jfif"
 import dgps from "../assets/images/hero/hero_DGPS.jfif"
 import drone from "../assets/images/hero/hero_drone.jfif"
-import total from "../assets/images/hero/hero_total.jfif"
+import total from "../assets/images/hero/hero_total.jpg"
 import GIS from "../assets/images/hero/hero_GIS.jfif"
 
 const slides = [

@@ -1,16 +1,12 @@
 // src/pages/AboutUs.jsx
 import { useEffect, useRef, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
-import {
-    ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Map, Satellite, Crosshair, Plane, HardHat, Layers3,
-} from "lucide-react";
-import {
-    companyIntro, ourStory, approachSteps, technology, industries, quality, visionMission, closingCta,
-} from "./aboutData.js";
+import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Map, Satellite, Crosshair, Plane, HardHat, Layers3, } from "lucide-react";
+import { companyIntro, ourStory, approachSteps, technology, industries, quality, visionMission, closingCta, } from "./aboutData.js";
 
 const EASE = "ease-[cubic-bezier(0.22,1,0.36,1)]";
 
-import about_main from "../../assets/images/logo.png";
+import about_main from "../../assets/images/Logo.png";
 
 const ICON_MAP = {
     map: Map,

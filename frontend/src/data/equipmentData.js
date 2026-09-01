@@ -1,6 +1,6 @@
 import accessories from "../assets/images/equipments/accessories.jfif"
 import auto_level from "../assets/images/equipments/auto-level.jfif"
-import dgps from "../assets/images/equipments/dgps.jfif"
+import dgps from "../assets/images/equipments/dgps.jpg"
 import drones from "../assets/images/equipments/drones.jfif"
 import rentals from "../assets/images/equipments/rentals.jfif"
 import total from "../assets/images/equipments/total-station.jfif"

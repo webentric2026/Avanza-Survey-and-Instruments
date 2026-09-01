@@ -2,7 +2,7 @@
 
 import about_main from "../../assets/images/about_us.jfif"
 import total from "../../assets/images/equipments/total-station.jfif"
-import dgps from "../../assets/images/equipments/dgps.jfif"
+import dgps from "../../assets/images/equipments/dgps.jpg"
 import drones from "../../assets/images/equipments/drones.jfif"
 import auto from "../../assets/images/equipments/auto-level.jfif"
 import survey from "../../assets/images/construction.jfif"
