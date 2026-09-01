@@ -392,7 +392,7 @@ export async function handleContactRequest(body, { ip } = {}) {
         errors.service = "Service is required.";
     }
 
-    if (!message || message.length < 10) {
+    if (!message || message.length < 1) {
         errors.message = "Message is required.";
     }
 
