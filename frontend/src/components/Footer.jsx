@@ -1,7 +1,7 @@
 // src/components/footer/Footer.jsx
 import { Link } from "react-router-dom";
 import { MapPin, Mail, Phone, ArrowUpRight } from "lucide-react";
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/Logo.png";
 import { NAV_LINKS, SERVICE_LINKS, CONTACT_INFO } from "../data/footerData.js";
 
 export default function Footer() {
