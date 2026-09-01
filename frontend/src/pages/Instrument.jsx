@@ -5,6 +5,7 @@ import {
 } from "lucide-react";
 
 import { CATEGORIES, INSTRUMENTS } from "../data/rentalData.js";
+import { Link } from "react-router-dom";
 
 
 const BRANDS = [...new Set(INSTRUMENTS.map((i) => i.brand))];
@@ -321,12 +322,11 @@ export default function Instrument() {
                       >
                         View Details
                       </button>
-                      <button
-                        onClick={() => handleEnquire(it)}
-                        className="h-9 bg-[#0B1220] text-[13px] font-semibold text-white hover:bg-black"
-                      >
+                      <Link to="/contact" className="h-9 bg-[#0B1220] text-[13px] font-semibold text-white hover:bg-black flex items-center justify-center">
                         Enquire for Rental
-                      </button>
+
+                      </Link>
+
                     </div>
                   </div>
                 </motion.article>

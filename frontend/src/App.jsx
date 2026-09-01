@@ -7,6 +7,7 @@ import AboutUs from './pages/aboutUs/AboutUs.jsx'
 import Instrument from './pages/Instrument.jsx'
 import Leadership from './pages/Leadership.jsx'
 import Contact from './pages/contact/Contact.jsx'
+import Services from './pages/services/Services.jsx'
 import ScrollToTop from './utils/ScrollToTop.jsx'
 import FloatingButtons from './utils/FloatingButtons.jsx'
 
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/rental" element={<Instrument />} />
         <Route path="/leadership" element={<Leadership />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/services" element={<Services />} />
       </Routes>
       <Footer />
     </>

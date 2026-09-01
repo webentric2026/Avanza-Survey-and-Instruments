@@ -6,13 +6,13 @@ import { Phone, MessageCircle, Share2 } from "lucide-react";
 const buttons = [
     {
         label: "Call Us",
-        href: "tel:+919XXXXXXXXX",
+        href: "tel:+919136154481",
         icon: Phone,
         className: "bg-blue-600 hover:bg-blue-700",
     },
     {
         label: "WhatsApp",
-        href: "https://wa.me/91XXXXXXXXXX",
+        href: "https://wa.me/919136154481",
         icon: MessageCircle,
         className: "bg-green-500 hover:bg-green-600",
     },

@@ -1,19 +1,3 @@
-/**
- * Avanza — Contact SMTP handler (server-side only)
- *
- * Works with:
- *  - Next.js App Router:  move this file to  app/api/contact/route.js  and export POST
- *  - Next.js Pages Router: move to pages/api/contact.js and export default handler
- *  - Express:            app.post('/api/contact', handler)  (example at bottom)
- *  - Vite + custom server / any Node server
- *
- * Env (never expose to client):
- *  SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASSWORD, SMTP_FROM, CONTACT_EMAIL
- * Optional: SMTP_SECURE (true/false), RATE_LIMIT_WINDOW_MS, RATE_LIMIT_MAX
- *
- * Install:  npm i nodemailer
- */
-
 import nodemailer from "nodemailer";
 
 // ── helpers ──────────────────────────────────────────────────────────
@@ -243,34 +227,6 @@ export async function handleContactRequest(body, { ip, headers } = {}) {
   return { ok: true };
 }
 
-// ── Next.js App Router:  app/api/contact/route.js ────────────────────
-// export async function POST(req) {
-//   try {
-//     const body = await req.json();
-//     const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
-//     await handleContactRequest(body, { ip });
-//     return Response.json({ ok: true }, { status: 200 });
-//   } catch (e) {
-//     const status = e.status || 500;
-//     const headers = {};
-//     if (e.retryAfter) headers["Retry-After"] = String(e.retryAfter);
-//     return Response.json({ ok: false, error: e.message || "Failed to send.", fields: e.fields }, { status, headers });
-//   }
-// }
-
-// ── Next.js Pages Router:  pages/api/contact.js ──────────────────────
-// export default async function handler(req, res) {
-//   if (req.method !== "POST") return res.status(405).json({ ok: false, error: "Method not allowed." });
-//   try {
-//     const ip = getClientIp(req);
-//     await handleContactRequest(req.body, { ip });
-//     return res.status(200).json({ ok: true });
-//   } catch (e) {
-//     const status = e.status || 500;
-//     if (e.retryAfter) res.setHeader("Retry-After", String(e.retryAfter));
-//     return res.status(status).json({ ok: false, error: e.message || "Failed to send.", fields: e.fields });
-//   }
-// }
 
 // ── Express ───────────────────────────────────────────────────────────
 export function createExpressHandler() {

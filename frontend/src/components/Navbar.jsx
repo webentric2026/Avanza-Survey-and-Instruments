@@ -6,7 +6,7 @@ import logo from "../assets/images/Logo.png";
 const NAV_LINKS = [
     { label: "Home", to: "/" },
     { label: "About Us", to: "/about" },
-    { label: "Instruments", to: "/rental" },
+    { label: "Instruments & Rentals", to: "/rental" },
     { label: "Services", to: "/services" },
     { label: "Leadership", to: "/leadership" },
 ];
