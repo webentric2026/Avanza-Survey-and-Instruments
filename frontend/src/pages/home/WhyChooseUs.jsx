@@ -94,7 +94,7 @@ export default function WhyChooseUs() {
               style={{ transitionDelay: inView ? "320ms" : "0ms" }}
             >
               <a
-                href="#contact"
+                href="/contact"
                 className="group inline-flex items-center gap-2.5 border border-white/25 px-6 py-3 text-sm font-semibold tracking-wide text-white transition-all duration-300 hover:border-[#D4A017] hover:bg-[#D4A017] hover:text-[#0B1F4B] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A017] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B1F4B]"
               >
                 Talk to Our Team

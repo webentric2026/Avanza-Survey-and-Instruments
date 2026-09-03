@@ -118,7 +118,7 @@ export default function EquipmentSection() {
                     </div>
 
                     <a
-                        href="#equipment-catalogue"
+                        href="/rental"
                         className="group inline-flex shrink-0 items-center gap-2.5 border border-slate-300 px-6 py-3 text-sm font-semibold text-[#0B1F4B] transition-all duration-300 hover:border-[#0B1F4B] hover:bg-[#0B1F4B] hover:text-white self-start lg:self-auto focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A017]"
                     >
                         View All Equipment

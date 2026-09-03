@@ -121,8 +121,16 @@ export default function Footer() {
           <p className="text-xs text-white/45 text-center sm:text-left">
             © {year} Avanza Survey & Instruments. All rights reserved.
           </p>
-          <p className="text-xs text-white/45">
-            Designed for precision-driven surveying & geospatial solutions.
+          <p className="text-sm text-white/45">
+            Website Designed & Developed by{" "}
+            <a
+              href="https://webentric.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#D4A017] transition-colors duration-200 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A017] rounded-sm"
+            >
+              Webentric
+            </a>
           </p>
         </div>
       </div>

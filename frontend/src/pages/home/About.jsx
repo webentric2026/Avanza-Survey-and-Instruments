@@ -93,7 +93,7 @@ export default function About() {
               style={{ transitionDelay: inView ? "460ms" : "0ms" }}
             >
               <a
-                href="#about-details"
+                href="/about"
                 className="group inline-flex items-center gap-2.5 bg-[#0B1F4B] px-7 py-3.5 text-sm font-semibold tracking-wide text-white transition-all duration-300 hover:bg-[#0A1A3E] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A017] focus-visible:ring-offset-2"
               >
                 Discover Avanza

@@ -103,13 +103,13 @@ export default function Hero() {
               prefersReducedMotion
                 ? undefined
                 : {
-                    backgroundImage: `url(${slide.image})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: slide.focal || "center",
-                    transitionProperty: "opacity, transform",
-                    transitionDuration: "1400ms",
-                    transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
-                  }
+                  backgroundImage: `url(${slide.image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: slide.focal || "center",
+                  transitionProperty: "opacity, transform",
+                  transitionDuration: "1400ms",
+                  transitionTimingFunction: "cubic-bezier(0.22, 1, 0.36, 1)",
+                }
             }
           >
             {prefersReducedMotion && (
@@ -145,7 +145,7 @@ export default function Hero() {
                 style={prefersReducedMotion ? undefined : { animationDelay: "320ms", opacity: 0 }}
               >
                 <a
-                  href="#know-more"
+                  href="#about"
                   className="inline-flex items-center justify-center border border-white/70 px-6 sm:px-7 py-3 text-xs sm:text-sm font-semibold tracking-[0.15em] text-white transition-all duration-200 hover:border-[#D4A017] hover:bg-[#D4A017] hover:text-black focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A017] focus-visible:ring-offset-2 focus-visible:ring-offset-black"
                 >
                   KNOW MORE

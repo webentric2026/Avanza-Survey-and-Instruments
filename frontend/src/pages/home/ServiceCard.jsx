@@ -40,7 +40,7 @@ export default function ServiceCard({ service, index }) {
       </div>
 
       <a
-        href={`#${service.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
+        href='/services'
         aria-label={`Explore ${service.title}`}
         className="mt-7 inline-flex items-center gap-2 text-sm font-medium text-[#0B1F4B] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A017] focus-visible:ring-offset-2 rounded-sm min-h-[44px] sm:min-h-0"
       >

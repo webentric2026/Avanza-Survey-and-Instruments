@@ -531,15 +531,7 @@ export default function Instrument() {
         )}
       </AnimatePresence>
 
-      {/* sticky mobile CTA */}
-      <div className="fixed inset-x-0 bottom-0 z-30 flex gap-2 border-t border-slate-200 bg-white p-3 lg:hidden">
-        <a href="tel:+919000000000" className="grid h-10 flex-1 place-items-center border border-slate-300 bg-white text-[13px] font-semibold text-[#0B1220]">
-          Call
-        </a>
-        <a href="#enquiry" className="grid h-10 flex-[1.6] place-items-center bg-[#FF5A1F] text-[13px] font-semibold text-white">
-          Enquire for Rental
-        </a>
-      </div>
+
       <div className="h-[64px] lg:hidden" aria-hidden />
 
       {/* toast */}
@@ -551,15 +543,7 @@ export default function Instrument() {
         )}
       </AnimatePresence>
 
-      {/* minimal footer */}
-      <footer className="border-t border-slate-200 bg-white">
-        <div className="mx-auto max-w-[1280px] px-4 py-6 sm:px-6 lg:px-8">
-          <div className="flex flex-col gap-2 text-[11px] tracking-wide text-slate-500 sm:flex-row sm:justify-between">
-            <span>© 2026 Avaza. Rental availability and specifications subject to confirmation.</span>
-            <span>Surveying Equipment Rental • Total Station • DGPS • GNSS • Auto Level • Drone Survey</span>
-          </div>
-        </div>
-      </footer>
+
     </div>
   );
 }

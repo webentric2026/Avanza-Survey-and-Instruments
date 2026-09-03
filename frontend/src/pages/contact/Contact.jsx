@@ -13,13 +13,13 @@ import { Phone, Mail, MapPin, MessageCircle, ChevronDown } from "lucide-react";
 const CONTACT_INFO = {
   phoneDisplay: "+91 98765 43210",
   phoneTel: "+919876543210",
-  whatsappUrl: "https://wa.me/919876543210?text=" + encodeURIComponent("Hello Avanza, I would like to chat about a project."),
-  email: "info@avanza.co.in",
-  mediaEmail: "media@avanza.co.in",
+  whatsappUrl: "https://wa.me/919136154481?text=" + encodeURIComponent("Hello Avanza, I would like to chat about a project."),
+  email: "avanzadelhi@gmail.com",
+  mediaEmail: "avanzadelhi@gmail.com",
   office: {
     name: "Avanza Surveying Solutions Pvt. Ltd.",
-    line1: "123, Surveyor's Estate, Civil Lines,",
-    line2: "Ranchi, Jharkhand – 834001, India",
+    line1: "4113/2 Jag Jiwan Niwas,",
+    line2: "Reghar Pura, Karol Bagh, New Delhi-110005",
     // used for Get Directions if needed
     mapsUrl: "https://www.google.com/maps/search/?api=1&query=123+Surveyor%27s+Estate+Civil+Lines+Ranchi+Jharkhand+834001",
   },

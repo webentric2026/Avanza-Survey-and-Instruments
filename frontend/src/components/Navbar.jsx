@@ -119,8 +119,11 @@ export default function Navbar() {
                             <img
                                 src={logo}
                                 alt="Avanza Survey & Instruments"
-                                className="h-18 md:h-25 w-auto object-contain"
+                                className="h-10 md:h-15 w-auto object-contain"
                             />
+                            <h1 className="text-[#0B1F4B] text-2xl md:text-xl font-bold tracking-wide">
+                                AVANZA
+                            </h1>
                         </Link>
 
                         {/* Desktop Links */}
@@ -257,6 +260,6 @@ export default function Navbar() {
                     </div>
                 </div>
             </div>
-        </header>
+        </header >
     );
 }

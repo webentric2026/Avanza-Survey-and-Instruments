@@ -4,7 +4,7 @@ import founder from "../assets/images/sonu.jpg";
 
 
 const FOUNDER_IMAGE = founder;
-const FOUNDER_IMAGE_ALT = "Sonu Kumar Jalutria, Founder and Director of Avanza";
+const FOUNDER_IMAGE_ALT = "Sonu Kumar Jaluthria, Owner";
 
 const PRINCIPLES = [
   {
@@ -44,7 +44,7 @@ export default function Leadership() {
     }
     const prevDesc = meta.content;
     meta.content =
-      "Meet Sonu Kumar Jalutria, Founder and Director of Avanza, and learn about the vision and principles behind our surveying and geospatial solutions.";
+      "Meet Sonu Kumar Jaluthria, Owner of Avanza, and learn about the vision and principles behind our surveying and geospatial solutions.";
     return () => {
       document.title = prevTitle;
       if (created) meta.remove();
@@ -87,7 +87,7 @@ export default function Leadership() {
 
 
             <div className="flex flex-col-reverse lg:flex-row items-center justify-between lg:gap-20">
-              {/* Left — text */}
+              {/* Right — text */}
               <div className="order-1 lg:col-span-6 lg:pr-6 xl:col-span-5 xl:pr-2 gap-0">
                 <h1
                   id="leadership-heading"
@@ -102,7 +102,7 @@ export default function Leadership() {
                 <div ref={setReveal} className="reveal reveal-delay-1 lg:col-span-8 mt-5">
                   <div className="bg-white">
                     <p className="max-w-[68ch] text-md leading-[1.75] text-slate-700">
-                      <span className="font-semibold text-[#0B1220]">Sonu Kumar Jalutria</span> is the Founder and Director of
+                      <span className="font-semibold text-[#0B1220]">Sonu Kumar Jaluthria</span> is the Owner of
                       Avanza, driving the company&apos;s focus on dependable surveying, geospatial solutions, and practical field
                       execution. His leadership is grounded in a clear standard: work that is accurate on site and trustworthy in
                       decisions that follow.
@@ -124,7 +124,7 @@ export default function Leadership() {
                 <div ref={setReveal} className="reveal reveal-delay-3 mt-8 hidden items-center gap-3 border-t border-slate-200 pt-6 lg:flex">
                 </div>
               </div>
-              {/* Right — portrait */}
+              {/* Left — portrait */}
               <div className=" w-80 md:w-100">
                 <figure
                   ref={setReveal}
@@ -166,8 +166,8 @@ export default function Leadership() {
                     className="flex items-end justify-between gap-4 bg-white px-4 py-3.5 sm:px-4"
                   >
                     <div>
-                      <div className="font-display text-[14px] font-semibold tracking-tight text-[#0B1220]">Sonu Kumar Jalutria</div>
-                      <div className="text-[12px] font-medium tracking-wide text-slate-500">Founder & Director</div>
+                      <div className="font-display text-[14px] font-semibold tracking-tight text-[#0B1220]">Sonu Kumar Jaluthria</div>
+                      <div className="text-[12px] font-medium tracking-wide text-slate-500">Owner</div>
                     </div>
                     <span className="hidden font-mono text-[11px] tracking-[0.12em] text-slate-400 sm:inline">AVANZA — 2026</span>
                   </figcaption>
@@ -215,7 +215,7 @@ export default function Leadership() {
                     <footer className="mt-8 flex items-center gap-4 border-t border-slate-200 pt-6">
                       <div>
                         <div className="font-display text-md font-semibold text-[#0B1220]">Sonu Kumar Jalutria</div>
-                        <div className="text-sm text-slate-500">Founder & Director, Avanza</div>
+                        <div className="text-sm text-slate-500">Owner, Avanza</div>
                       </div>
                       <span className="ml-auto hidden h-8 w-px bg-slate-200 sm:block" aria-hidden />
 
@@ -387,7 +387,7 @@ export default function Leadership() {
                   Explore Our Services <ArrowRight className="h-4 w-4" aria-hidden />
                 </a>
                 <a
-                  href="/instruments"
+                  href="/rental"
                   className="inline-flex h-11 items-center justify-center gap-2 border border-slate-300 bg-white px-6 text-[13px] font-semibold text-[#0B1220] transition hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A017] focus-visible:ring-offset-2"
                 >
                   Explore Instruments <ArrowRight className="h-4 w-4" aria-hidden />

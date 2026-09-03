@@ -45,16 +45,7 @@ export default function IndustrySlide({ industry, isActive }) {
             {industry.description}
           </p>
 
-          <span className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-white">
-            Explore industry
-            <ArrowUpRight
-              className={[
-                "h-4 w-4 transition-transform duration-300",
-                isActive ? "translate-x-0 translate-y-0" : "translate-x-0.5 -translate-y-0.5",
-              ].join(" ")}
-              aria-hidden="true"
-            />
-          </span>
+
         </div>
       </div>
     </article>
