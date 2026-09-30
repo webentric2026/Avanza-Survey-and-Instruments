@@ -438,13 +438,13 @@ export default function Instrument() {
                     >
                       Enquire for Rental
                     </button>
-                    <a
-                      href="#enquiry"
+                    <Link
+                      to="/contact"
                       onClick={() => setDetail(null)}
                       className="grid h-10 place-items-center border border-slate-300 bg-white text-[13px] font-semibold text-[#0B1220] hover:bg-slate-50"
                     >
                       Request Quote
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

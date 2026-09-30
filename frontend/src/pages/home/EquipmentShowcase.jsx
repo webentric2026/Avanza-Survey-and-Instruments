@@ -50,7 +50,7 @@ export default function EquipmentShowcase({ item, isActive }) {
         </p>
 
         <a
-          href="#equipment-catalogue"
+          href="/rental"
           className="group mt-7 inline-flex items-center gap-2.5 text-sm font-semibold text-[#0B1F4B] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A017] focus-visible:ring-offset-2 rounded-sm"
         >
           <span className="border-b border-transparent group-hover:border-[#0B1F4B] transition-colors duration-300">

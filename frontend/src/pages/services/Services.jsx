@@ -184,7 +184,7 @@ export default function Services() {
                 </div>
               ))}
             </div>
-            <a href="/industries" className="mt-4 inline-flex items-center gap-1 text-[12px] font-semibold text-[#202B4A] hover:text-[#D9A515] sm:hidden">
+            <a href="/about" className="mt-4 inline-flex items-center gap-1 text-[12px] font-semibold text-[#202B4A] hover:text-[#D9A515] sm:hidden">
               View all industries <ArrowRight className="h-3.5 w-3.5" aria-hidden />
             </a>
           </div>

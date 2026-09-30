@@ -11,17 +11,17 @@ import { Phone, Mail, MapPin, MessageCircle, ChevronDown } from "lucide-react";
  * Replace the constants below with real Avanza details when needed.
  */
 const CONTACT_INFO = {
-  phoneDisplay: "+91 98765 43210",
-  phoneTel: "+919876543210",
+  phoneDisplay: "+91 91361 54481",
+  phoneTel: "+919136154481",
   whatsappUrl: "https://wa.me/919136154481?text=" + encodeURIComponent("Hello Avanza, I would like to chat about a project."),
-  email: "avanzadelhi@gmail.com",
-  mediaEmail: "avanzadelhi@gmail.com",
+  email: "info@avanzasurvey.in",
+  mediaEmail: "info@avanzasurvey.in",
   office: {
     name: "Avanza Surveying Solutions Pvt. Ltd.",
     line1: "4113/2 Jag Jiwan Niwas,",
     line2: "Reghar Pura, Karol Bagh, New Delhi-110005",
     // used for Get Directions if needed
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=123+Surveyor%27s+Estate+Civil+Lines+Ranchi+Jharkhand+834001",
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=4113%2F2+Jag+Jiwan+Niwas+Reghar+Pura+Karol+Bagh+New+Delhi+110005",
   },
 };
 
@@ -364,8 +364,8 @@ export default function Contact() {
 
                   <p className="mt-3 text-center text-[10.5px] leading-4 text-[#6B7A8D]">
                     By contacting us, you agree to our{" "}
-                    <a href="#" className="font-semibold text-[#162033] hover:underline">Terms of Service</a> and{" "}
-                    <a href="#" className="font-semibold text-[#162033] hover:underline">Privacy Policy</a>
+                    <a href="/about" className="font-semibold text-[#162033] hover:underline">Terms of Service</a> and{" "}
+                    <a href="/contact" className="font-semibold text-[#162033] hover:underline">Privacy Policy</a>
                   </p>
                 </form>
               </div>

@@ -191,7 +191,7 @@ function TechnologyEquipment() {
                         <p className="mt-5 max-w-xl text-base sm:text-lg leading-relaxed text-slate-600">{technology.text}</p>
                     </div>
                     <Link
-                        to="/instruments"
+                        to="/rental"
                         className="group inline-flex shrink-0 items-center gap-2.5 border border-slate-300 px-6 py-3 text-sm font-semibold text-[#0B1F4B] transition-all duration-300 hover:border-[#0B1F4B] hover:bg-[#0B1F4B] hover:text-white self-start focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A017]"
                     >
                         Explore Our Equipment
@@ -291,10 +291,13 @@ function IndustriesSlider() {
                                 <div className="relative z-10 flex h-full flex-col justify-end p-6 ">
                                     <h3 className="text-xl font-semibold text-white">{industry.title}</h3>
                                     <p className="mt-2 text-sm leading-relaxed text-white/80">{industry.description}</p>
-                                    <span className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-white">
+                                    <Link
+                                        to="/services"
+                                        className="mt-4 inline-flex w-fit items-center gap-2 text-sm font-medium text-white hover:text-[#D4A017] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A017] rounded-sm"
+                                    >
                                         Learn more
                                         <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" aria-hidden="true" />
-                                    </span>
+                                    </Link>
                                 </div>
                             </article>
                         </div>

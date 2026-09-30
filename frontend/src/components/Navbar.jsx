@@ -80,11 +80,11 @@ export default function Navbar() {
 
                     <div className="flex items-center gap-4 sm:gap-6 ml-auto">
                         <a
-                            href="mailto:avanzadelhi@gmail.com"
+                            href="mailto:info@avanzasurvey.in"
                             className="flex items-center gap-1.5 hover:text-[#D4A017] transition-colors duration-200"
                         >
                             <Mail className="w-3.5 h-3.5 text-[#D4A017] shrink-0" aria-hidden="true" />
-                            <span className=" inline">avanzadelhi@gmail.com</span>
+                            <span className=" inline">info@avanzasurvey.in</span>
                         </a>
                         <a
                             href="tel:+919136154481"
@@ -237,9 +237,9 @@ export default function Navbar() {
                                 <Phone className="w-4 h-4 text-[#D4A017] shrink-0" aria-hidden="true" />
                                 <span>9136154481 / 8860988478</span>
                             </a>
-                            <a href="mailto:avanzadelhi@gmail.com" className="flex items-center gap-2 min-h-[44px] hover:text-[#0B1F4B] transition-colors duration-200">
+                            <a href="mailto:info@avanzasurvey.in" className="flex items-center gap-2 min-h-[44px] hover:text-[#0B1F4B] transition-colors duration-200">
                                 <Mail className="w-4 h-4 text-[#D4A017] shrink-0" aria-hidden="true" />
-                                <span>avanzadelhi@gmail.com</span>
+                                <span>info@avanzasurvey.in</span>
                             </a>
                             <div className="flex items-start gap-2">
                                 <MapPin className="w-4 h-4 text-[#D4A017] shrink-0 mt-0.5" aria-hidden="true" />
