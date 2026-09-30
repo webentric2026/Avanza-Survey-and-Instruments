@@ -562,12 +562,17 @@ export default async (req, context) => {
             );
         }
 
+        // Don't leak SMTP internals (e.g. "Invalid login...") to visitors.
+        // Real cause is still in the function logs via console.error above.
+        const isClientError = status === 422 || status === 429;
+        const publicMessage = isClientError
+            ? (error.message || "Failed to send.")
+            : "Something went wrong while sending your enquiry. Please try again or contact us directly.";
+
         return new Response(
             JSON.stringify({
                 ok: false,
-                error:
-                    error.message ||
-                    "Failed to send.",
+                error: publicMessage,
                 fields: error.fields,
             }),
             {

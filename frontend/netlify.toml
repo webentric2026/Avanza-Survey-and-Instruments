@@ -10,3 +10,10 @@
   from = "/api/contact"
   to = "/.netlify/functions/contact"
   status = 200
+
+# SPA fallback — must stay LAST so /api/* still hits the function.
+# Serves index.html for /about, /rental, /services, etc. on refresh/direct visits.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
