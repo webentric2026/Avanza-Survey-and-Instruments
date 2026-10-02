@@ -8,6 +8,8 @@ export const NAV_LINKS = [
   { label: "Instruments", to: "/rental" },
   { label: "Services", to: "/services" },
   { label: "Leadership", to: "/leadership" },
+  { label: "Blog", to: "/blog" },
+  { label: "Contact Us", to: "/contact" },
 ];
 
 export const SERVICE_LINKS = [

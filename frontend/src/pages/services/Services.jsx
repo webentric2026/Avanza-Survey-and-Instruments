@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import SEO from "../../components/SEO.jsx";
 import instruments from "../../assets/images/equipments/accessories.jfif";
 import {
   Mountain,
@@ -115,21 +116,45 @@ function useReveal() {
 export default function Services() {
   const setReveal = useReveal();
 
-  useEffect(() => {
-    const prev = document.title;
-    document.title = "Surveying & Geospatial Services | Avanza Survey & Instruments";
-    let meta = document.querySelector('meta[name="description"]');
-    const created = !meta;
-    if (!meta) { meta = document.createElement("meta"); meta.name = "description"; document.head.appendChild(meta); }
-    const prevDesc = meta.content;
-    meta.content = "Avanza Survey & Instruments provides topographical, DGPS, drone, total station, GIS, land surveying, and survey instrument sales and rental services.";
-    return () => { document.title = prev; if (created) meta.remove(); else meta.content = prevDesc; };
-  }, []);
-
   const phoneTel = "+919136154481";
+
+  const servicesJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: SERVICES.map((s, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "Service",
+        name: s.title,
+        description: s.desc,
+        provider: {
+          "@type": "LocalBusiness",
+          name: "Avanza Survey & Instruments",
+          url: "https://avanzasurvey.in/",
+        },
+        areaServed: "India",
+      },
+    })),
+  };
 
   return (
     <div className="min-h-screen bg-[#F7F7F8] text-[#202020] antialiased">
+      <SEO
+        path="/services"
+        title="Surveying & Geospatial Services"
+        description="Topographical survey, DGPS survey, drone survey, total station survey, GIS mapping, land survey and survey instrument sales & rental in Delhi NCR and across India."
+        keywords={[
+          "topographical survey",
+          "DGPS survey Delhi",
+          "drone survey services",
+          "total station survey",
+          "GIS mapping services",
+          "land survey services Delhi",
+          "survey instrument sales rental",
+        ]}
+        jsonLd={servicesJsonLd}
+      />
 
       <main id="main-content">
 

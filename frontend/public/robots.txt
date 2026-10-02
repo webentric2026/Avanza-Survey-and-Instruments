@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://avanzasurvey.in/sitemap.xml

@@ -3,6 +3,7 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight, Map, Satellite, Crosshair, Plane, HardHat, Layers3, } from "lucide-react";
 import { companyIntro, ourStory, approachSteps, technology, industries, quality, visionMission, closingCta, } from "./aboutData.js";
+import SEO from "../../components/SEO.jsx";
 
 const EASE = "ease-[cubic-bezier(0.22,1,0.36,1)]";
 
@@ -385,6 +386,17 @@ function VisionMission() {
 export default function AboutUs() {
     return (
         <>
+            <SEO
+                path="/about"
+                title="About Us"
+                description="Avanza Survey & Instruments is a professional surveying and geospatial company in Delhi — DGPS, total station, drone surveys, GIS mapping and equipment rental built on accuracy."
+                keywords={[
+                    "survey company Delhi",
+                    "Avanza Survey Instruments",
+                    "geospatial company India",
+                    "professional land surveyors Delhi",
+                ]}
+            />
             <main className="mt-10">
 
                 <CompanyIntro />

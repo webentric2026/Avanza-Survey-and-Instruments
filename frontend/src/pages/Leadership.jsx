@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { ArrowRight, Compass, ShieldCheck, Layers, Clock3 } from "lucide-react";
 import founder from "../assets/images/sonu.jpg";
+import SEO from "../components/SEO.jsx";
 
 
 const FOUNDER_IMAGE = founder;
@@ -32,26 +33,6 @@ const PRINCIPLES = [
 export default function Leadership() {
   const revealRefs = useRef([]);
   useEffect(() => {
-    // SEO — only sets metadata if not already managed by the host app/router
-    const prevTitle = document.title;
-    document.title = "Leadership | Avanza";
-    let meta = document.querySelector('meta[name="description"]');
-    const created = !meta;
-    if (!meta) {
-      meta = document.createElement("meta");
-      meta.name = "description";
-      document.head.appendChild(meta);
-    }
-    const prevDesc = meta.content;
-    meta.content =
-      "Meet Sonu Kumar Jaluthria, Owner of Avanza, and learn about the vision and principles behind our surveying and geospatial solutions.";
-    return () => {
-      document.title = prevTitle;
-      if (created) meta.remove();
-      else meta.content = prevDesc;
-    };
-  }, []);
-  useEffect(() => {
     if (typeof window === "undefined" || !("IntersectionObserver" in window)) return;
     const mql = window.matchMedia("(prefers-reduced-motion: reduce)");
     if (mql.matches) {
@@ -78,6 +59,12 @@ export default function Leadership() {
 
   return (
     <div className="min-h-screen bg-[#F8F9FB] text-slate-900 antialiased selection:bg-[#D4A017] selection:text-white">
+      <SEO
+        path="/leadership"
+        title="Leadership"
+        description="Meet Sonu Kumar Jaluthria, Owner of Avanza Survey & Instruments, and the vision behind dependable surveying and geospatial solutions in Delhi NCR."
+        keywords={["Avanza leadership", "Sonu Kumar Jaluthria", "survey company Delhi owner"]}
+      />
 
       {/* Page */}
       <main id="main-content">

@@ -9,6 +9,7 @@ const NAV_LINKS = [
     { label: "Instruments & Rentals", to: "/rental" },
     { label: "Services", to: "/services" },
     { label: "Leadership", to: "/leadership" },
+    { label: "Blog", to: "/blog" },
 ];
 
 export default function Navbar() {

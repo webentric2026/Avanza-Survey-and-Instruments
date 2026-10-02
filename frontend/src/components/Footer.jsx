@@ -121,6 +121,26 @@ export default function Footer() {
           <p className="text-xs text-white/45 text-center sm:text-left">
             © {year} Avanza Survey & Instruments. All rights reserved.
           </p>
+          <nav aria-label="Legal" className="flex items-center gap-5 text-xs text-white/45">
+            <Link
+              to="/terms"
+              className="transition-colors duration-200 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A017] rounded-sm"
+            >
+              Terms of Service
+            </Link>
+            <Link
+              to="/privacy"
+              className="transition-colors duration-200 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A017] rounded-sm"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              to="/blog"
+              className="transition-colors duration-200 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D4A017] rounded-sm"
+            >
+              Blog
+            </Link>
+          </nav>
           <p className="text-sm text-white/45">
             Website Designed & Developed by{" "}
             <a

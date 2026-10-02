@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Phone, Mail, MapPin, MessageCircle, ChevronDown } from "lucide-react";
+import SEO from "../../components/SEO.jsx";
 
 /**
  * Avanza — Contact page
@@ -37,25 +38,6 @@ export default function Contact() {
   });
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState({ type: "idle", msg: "" }); // idle | sending | success | error
-
-  useEffect(() => {
-    const prev = document.title;
-    document.title = "Contact Avanza | Surveying & Geospatial Solutions";
-    let meta = document.querySelector('meta[name="description"]');
-    const created = !meta;
-    if (!meta) {
-      meta = document.createElement("meta");
-      meta.name = "description";
-      document.head.appendChild(meta);
-    }
-    const prevDesc = meta.content;
-    meta.content = "Get in touch with Avanza for professional surveying, geospatial solutions, mapping services, and survey equipment rental.";
-    return () => {
-      document.title = prev;
-      if (created) meta.remove();
-      else meta.content = prevDesc;
-    };
-  }, []);
 
   const update = (k, v) => setForm((s) => ({ ...s, [k]: v }));
 
@@ -114,6 +96,17 @@ export default function Contact() {
 
   return (
     <div className=" bg-[#EFF3FA] text-[#162033] mt-15">
+      <SEO
+        path="/contact"
+        title="Contact Us"
+        description="Contact Avanza Survey & Instruments for land surveys, DGPS, drone and total station surveys, GIS mapping and survey equipment rental in Delhi NCR. Call, WhatsApp or email info@avanzasurvey.in."
+        keywords={[
+          "contact surveyor Delhi",
+          "land surveyor contact",
+          "survey quotation Delhi",
+          "Avanza contact",
+        ]}
+      />
       <main>
         {/* subtle page container */}
         <div className="mx-auto max-w-[1280px] px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
@@ -364,8 +357,8 @@ export default function Contact() {
 
                   <p className="mt-3 text-center text-[10.5px] leading-4 text-[#6B7A8D]">
                     By contacting us, you agree to our{" "}
-                    <a href="/about" className="font-semibold text-[#162033] hover:underline">Terms of Service</a> and{" "}
-                    <a href="/contact" className="font-semibold text-[#162033] hover:underline">Privacy Policy</a>
+                    <a href="/terms" className="font-semibold text-[#162033] hover:underline">Terms of Service</a> and{" "}
+                    <a href="/privacy" className="font-semibold text-[#162033] hover:underline">Privacy Policy</a>
                   </p>
                 </form>
               </div>

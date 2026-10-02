@@ -6,6 +6,7 @@ import {
 
 import { CATEGORIES, INSTRUMENTS } from "../data/rentalData.js";
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO.jsx";
 
 
 const BRANDS = [...new Set(INSTRUMENTS.map((i) => i.brand))];
@@ -120,6 +121,20 @@ export default function Instrument() {
 
   return (
     <div className="min-h-screen bg-[#F8F9FB] text-slate-900 antialiased selection:bg-[#D4A017] selection:text-white">
+      <SEO
+        path="/rental"
+        title="Survey Instruments for Sale & Rental"
+        description="Rent or buy total stations, DGPS/GNSS, surveying drones, auto levels and accessories in Delhi NCR. Calibrated Leica, Trimble and Topcon instruments for every project."
+        keywords={[
+          "survey equipment rental",
+          "total station rental Delhi",
+          "DGPS rental",
+          "survey instruments on rent",
+          "auto level rental",
+          "surveying drones rental",
+          "Leica total station rental",
+        ]}
+      />
 
       {/* CATEGORIES */}
       <section className="mx-auto max-w-[1280px] px-4 py-10 sm:px-6 lg:px-8 lg:py-12 mt-20">
